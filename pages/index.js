@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import db from '../db.json';
 import Widget from '../src/components/Widget'
-import QuizLogo from '../src/components/QuizLogo'
+//import QuizLogo from '../src/components/QuizLogo'
 import QuizBackground from '../src/components/QuizBackground'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
-
+import Head from '../src/components/Head'
 
 const Title = styled.h1`
   font-size: 50px;
@@ -33,6 +33,8 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return(
+    <>
+    <Head />
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
         <Widget>
@@ -54,5 +56,6 @@ export default function Home() {
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/wendell-priebe" />
     </QuizBackground>
+    </>
   );
 }

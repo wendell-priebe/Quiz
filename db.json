@@ -2,7 +2,10 @@
     "title":"Quiz dos vigadores",
     "bg":"https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6B29BF78CEEFD42CA79EE19195D09868669DFD6E759E43E6A15EDC13FA1B84DE/scale?width=2880&aspectRatio=1.78&format=jpeg",
     "description":"Teste seus conhecimento sobre os vigadores e vamos ver o quanto vocês conhece",
-
+    "head":{
+      "title":"<title>Quiz Vingadores</title>",
+      "meta":"<meta key='og:image' name='og:image' content={db.bg} />"
+    },
 
 
     "theme": {
