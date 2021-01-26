@@ -1,13 +1,13 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Widget = styled.div`
   margin-top:24px;
   margin-bottom:24px;
-  border: 1px solid ${({theme})=>theme.colors.primary};
-  background-color: ${({theme})=>{
-    //console.log(theme); //mostra as info do theme no console
-    return theme.colors.mainBg
-  }};
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) =>
+    // console.log(theme); //mostra as info do theme no console
+    theme.colors.mainBg
+};
   border-radius:4px;
   overflow:hidden;
 
@@ -29,7 +29,7 @@ Widget.Header = styled.header`
   justify-content:flex-start;
   align-items:center;
   padding: 18px 32px;
-  background-color:${({theme})=>theme.colors.secondary};
+  background-color:${({ theme }) => theme.colors.secondary};
   color: black;
   *{
     margin:0;
@@ -48,9 +48,21 @@ Widget.Content = styled.header`
     list-style:none;
     padding:0;
   }
+  input{
+    padding:10px;
+    margin:0 auto;
+    display:block;
+    outline:none;
+    border-radius:4px;
+  }
+  button{
+    background-color:${({ theme }) => theme.colors.secondary};
+    padding:15px 25px;
+    margin:0 auto;
+    margin-top:20px;
+    border-radius:4px;
+    display:block;
+  }
 `;
-
-
-
 
 export default Widget;

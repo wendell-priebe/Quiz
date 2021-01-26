@@ -1,16 +1,19 @@
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+// import Head from 'next/head'
+import {useRouter} from 'next/router';
 import db from '../db.json';
-import Widget from '../src/components/Widget'
-//import QuizLogo from '../src/components/QuizLogo'
-import QuizBackground from '../src/components/QuizBackground'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GitHubCorner'
-import Head from '../src/components/Head'
+import Widget from '../src/components/Widget';
+//import QuizLogo from '../src/components/QuizLogo';
+import QuizBackground from '../src/components/QuizBackground';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
+import Head from '../src/components/Head';
 
 const Title = styled.h1`
   font-size: 50px;
   color: ${({ theme }) => theme.colors.secondary};
-`
+`;
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
 //   flex:1;
@@ -29,33 +32,51 @@ export const QuizContainer = styled.div`
   }
 `;
 
-
-
 export default function Home() {
-  return(
-    <>
-    <Head />
-    <QuizBackground backgroundImage={db.bg}>
-      <QuizContainer>
-        <Widget>
-          <Widget.Header>
-            <h1>{db.title}</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <p>{db.description}</p>
-          </Widget.Content>
-        </Widget>
-        <Widget>
-          <Widget.Content>
-            <h1>Quizes da Galera</h1>
+  const router = useRouter();
+  const [name , setName] = React.useState('');
 
-            <p>lorem ipsum dolor sit amet...</p>
-          </Widget.Content>
-        </Widget>
-        <Footer />
-      </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/wendell-priebe" />
-    </QuizBackground>
+  return (
+    <>
+      <Head />
+      <QuizBackground backgroundImage={db.bg}>
+        <QuizContainer>
+          <Widget>
+            <Widget.Header>
+              <h1>{db.title}</h1>
+            </Widget.Header>
+            <Widget.Content>
+              <form onSubmit={function(infosDoEvento){
+                infosDoEvento.preventDefault();
+                router.push(`/quiz?name=${name}`);
+                console.log("Fazendo uma submisao");
+
+                //router manda pra proxima pagina;
+              }}>
+              <input placeholder="Diz ai seu nome" 
+                onChange={function(infosDoEvento){
+                console.log(infosDoEvento.target.value);
+                  //name = infosDoEvento.target.value;
+                  setName(infosDoEvento.target.value)
+                }}
+              />
+              <button type="submit" disabled={name.length === 0}>
+                Jogador {name}
+              </button>
+              </form>
+            </Widget.Content>
+          </Widget>
+          <Widget>
+            <Widget.Content>
+              <h1>Quizes da Galera</h1>
+
+              <p>lorem ipsum dolor sit amet...</p>
+            </Widget.Content>
+          </Widget>
+          <Footer />
+        </QuizContainer>
+        <GitHubCorner projectUrl="https://github.com/wendell-priebe" />
+      </QuizBackground>
     </>
   );
 }
