@@ -33,11 +33,14 @@ export default function Footer(props) {
         <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
       </a>
       <p>
-        Orgulhosamente criado durante
+        Orgulhosamente criado por 
+        <a target="__blanck" href="https://wendell-priebe.netlify.app/">
+          <span> WENDELL</span>
+        </a>
         {' '}
-        a
+        durante a
         {' '}
-        <a href="https://www.alura.com.br/">
+        <a href="https://www.instagram.com/wendellpriebe/">
           <span>Imersão React da Alura</span>
         </a>
       </p>

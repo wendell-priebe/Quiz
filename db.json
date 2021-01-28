@@ -24,7 +24,7 @@
         "image": "https://media0.giphy.com/media/PpeGK6edBWAxi/giphy.webp?cid=ecf05e47kuk4zot9x3knxn4i9xn8474xt30lwlu6swayhwxf&rid=giphy.webp",
         "title": "Qual foi o primeiro filme a ser lançado?",
         "description": "Será que vai acertar ?",
-        "answer": 0,
+        "answer": 3,
         "alternatives": [
            "Capitão América 2: O Soldado Invernal",
            "O Incrível Hulk",
@@ -48,7 +48,7 @@
         "image": "https://media3.giphy.com/media/FjBnClwCFoity/giphy.webp?cid=ecf05e47uxj5yljhotxdrfjry1it17rwzcm7zh8j523rp0jz&rid=giphy.webp",
         "title": "Quem ficou no time Stark, em Capitão América: Guerra Civil?",
         "description": "Quem ?",
-        "answer": 0,
+        "answer": 3,
         "alternatives": [
            "Dr. Estranho, Bucky, Rocket, Falcão, Hulk, Viúva Negra e Gavião Arqueiro.",
            "Capitão América, Hulk, Peter Quill, Homem Aranha e Visão.",
@@ -60,7 +60,7 @@
         "image": "https://media2.giphy.com/media/pAUg2l9WEV3QA/200w.webp?cid=ecf05e47mesi2vupwhu6y39h3kw6r1axta0lrhkznpsgsrfm&rid=200w.webp",
         "title": "A Última. Quais heróis já conseguiram levantar o martelo de Thor?",
         "description": "Essa é pesada hahaha",
-        "answer": 0,
+        "answer": 1,
         "alternatives": [
            "Hulk e Feiticeira Escarlate.",
            "Steve Rogers e Visão.",
