@@ -2,13 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 // import Head from 'next/head'
 import {useRouter} from 'next/router';
+
 import db from '../db.json';
 import Widget from '../src/components/Widget';
-//import QuizLogo from '../src/components/QuizLogo';
+import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Head from '../src/components/Head';
+import Input from '../src/components/Input'
+import Button from '../src/components/Button';
 
 const Title = styled.h1`
   font-size: 50px;
@@ -41,6 +44,7 @@ export default function Home() {
       <Head />
       <QuizBackground backgroundImage={db.bg}>
         <QuizContainer>
+          {/* <QuizLogo /> */}
           <Widget>
             <Widget.Header>
               <h1>{db.title}</h1>
@@ -53,16 +57,15 @@ export default function Home() {
 
                 //router manda pra proxima pagina;
               }}>
-              <input placeholder="Diz ai seu nome" 
-                onChange={function(infosDoEvento){
-                console.log(infosDoEvento.target.value);
-                  //name = infosDoEvento.target.value;
-                  setName(infosDoEvento.target.value)
-                }}
+              <Input 
+                name="nomeDoUsuario"
+                placeholder="Diz ai seu nome" 
+                onChange={(infosDoEvento)=>{setName(infosDoEvento.target.value)}}
+                value={name}
               />
-              <button type="submit" disabled={name.length === 0}>
+              <Button type="submit" disabled={name.length === 0}>
                 Jogador {name}
-              </button>
+              </Button>
               </form>
             </Widget.Content>
           </Widget>
@@ -80,3 +83,7 @@ export default function Home() {
     </>
   );
 }
+
+
+
+// parei no video 3 9:51min
